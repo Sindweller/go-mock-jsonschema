@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "mock": {
+            "mock": "@name"
+          }
+        },
+        "time": {
+          "type": "string",
+          "mock": {
+            "mock": "@datetime"
+          }
+        },
+        "value": {
+          "type": "string",
+          "mock": {
+            "mock": "this is value"
+          }
+        }
+      }
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "mock": {
+          "mock": "@integer"
+        }
+      }
+    }
+  }
+}
