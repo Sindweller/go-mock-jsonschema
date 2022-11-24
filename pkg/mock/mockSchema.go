@@ -25,7 +25,7 @@ func (m *ObjectOrArray) ToString() string {
 	return string(res)
 }
 
-func (m *ObjectOrArray) ToTypeAndMock() BasicMock {
+func (m *ObjectOrArray) ToBasicMock() BasicMock {
 	return BasicMock{Mock: m.Mock, Type: m.Type}
 }
 

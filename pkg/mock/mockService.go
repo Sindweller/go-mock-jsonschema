@@ -2,8 +2,8 @@ package mock
 
 import (
 	"encoding/json"
+	random2 "github.com/Sindweller/go-mock-jsonschema/pkg/mock/random"
 	lorem "github.com/drhodes/golorem"
-	random2 "go-mock-jsonschema/pkg/mock/random"
 	"math/rand"
 )
 
@@ -77,7 +77,7 @@ func GenerateMockData(resbody string) map[string]interface{} {
 		} else if v.Type == "array" {
 			res[k] = generateArrayByValue(BasicMock{Type: v.Items.Type, Mock: v.Items.Mock})
 		} else {
-			res[k] = generateByValue(v.ToTypeAndMock())
+			res[k] = generateByValue(v.ToBasicMock())
 		}
 	}
 	return res
@@ -129,7 +129,7 @@ func generateByValue(value BasicMock) interface{} {
 			return true
 		}
 	default:
-		return "unknown type"
+		return nil
 	}
 }
 

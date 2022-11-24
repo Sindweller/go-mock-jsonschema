@@ -3,8 +3,8 @@ package cmd
 import (
 	"bytes"
 	"fmt"
+	"github.com/Sindweller/go-mock-jsonschema/pkg/mock"
 	"github.com/spf13/cobra"
-	"go-mock-jsonschema/pkg/mock"
 	"io"
 	"os"
 )

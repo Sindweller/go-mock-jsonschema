@@ -1,4 +1,4 @@
-module go-mock-jsonschema
+module github.com/Sindweller/go-mock-jsonschema
 
 go 1.19
 
